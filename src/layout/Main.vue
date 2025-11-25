@@ -21,7 +21,7 @@
 		 </div>
 	</nav>
 	<main>
-		<slot></slot>
+		<RouterView />
 	</main>
 </template>
 
