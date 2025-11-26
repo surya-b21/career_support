@@ -1,4 +1,5 @@
 <template>
+	<!-- Section 1 -->
 	<div class="bg-[#EDF3F9] text-center my-3 mx-7 p-10 rounded-xl">
 		<span class="text-[#155DFC]">#1 Career Center Platform in Indonesia</span>
 
@@ -9,6 +10,31 @@
 		<div class="flex justify-center gap-x-5 mt-10">
 			<button type="button" class="custom-button">Career Support App</button>
 			<button type="button" class="custom-button">School Portal</button>
+		</div>
+
+		<img src="@/assets/images/rafiki.png" alt="Career Support App" class="mx-auto mt-5">
+	</div>
+
+	<!-- Section 2 -->
+	<p class="text-4xl leading-15 font-semibold text-center mt-20 mb-5">Why is an All-In-One Career Center <br/>Management Platform Important?</p>
+	<p class="text-center text-[#4B4B4B] mb-15">Various needs can be answered with one digital platform. Career Support helps you improve the performance <br/> of your career center with the spirit of Go Digital and National.</p>
+
+	<div class="bg-[#EDF3F9] text-center my-3 mx-7 p-10 rounded-xl grid grid-cols-4 gap-x-15">
+		<div>
+			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">92%</p>
+			<p class="text-sm text-[#1D3752]">The number of relevant job vacancy information is minimal</p>
+		</div>
+		<div>
+			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">83%</p>
+			<p class="text-sm text-[#1D3752]">Corporate partnership networks are difficult to access</p>
+		</div>
+		<div>
+			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">80%</p>
+			<p class="text-sm text-[#1D3752]">Student & alumni database is incomplete</p>
+		</div>
+		<div>
+			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">76%</p>
+			<p class="text-sm text-[#1D3752]">Skill training for students & alumni is still lacking</p>
 		</div>
 	</div>
 </template>
