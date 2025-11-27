@@ -1,6 +1,6 @@
 <template>
 	<div class="flex flex-col items-center">
-		<div class="max-w-8xl">
+		<div class="max-w-400">
 			<nav class="navbar py-10">
 				<img src="@/assets/images/logo.png" alt="logo" class="logo absolute left-5 top-1/2 -translate-y-1/2" />
 
