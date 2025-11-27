@@ -267,9 +267,41 @@
 			<img src="@/assets/images/skillhub.png" alt="skillhub image" class="rounded-xl">
 		</div>
 	 </div>
+
+	 <!-- Section 9 -->
+	  <div class="p-20">
+		<div class="pb-5">
+			<p class="text-4xl leading-15 font-semibold text-center">Institutional Partners</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">Institutions that have collaborated and are integrated with Career Support.</p>
+			
+			<div class="flex items-center justify-evenly">
+				<img v-for="n in Array.from({ length: 8 }, (v, i) => i + 1)" :key="n" :src="getImage('institutional_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
+			</div>
+		</div>
+		<div class="py-5">
+			<p class="text-4xl leading-15 font-semibold text-center">School Partners</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">Schools that have actively partnered with Career Support to build a digital career center and monitor the development of students and alumni.</p>
+			
+			<div class="flex items-center justify-evenly">
+				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n" :src="getImage('school_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
+			</div>
+		</div>
+		<div>
+			<p class="text-4xl leading-15 font-semibold text-center">Company Partners</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">Companies that provide job vacancies and support career activities for students.</p>
+			
+			<div class="flex items-center justify-evenly">
+				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n" :src="getImage('company_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
+			</div>
+		</div>
+	  </div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+const getImage = (path: string, n: number) => {
+	return new URL(`../assets/images/${path}/image_${n}.png`, import.meta.url).href
+}
+</script>
 
 <style scoped>
 .custom-button {
