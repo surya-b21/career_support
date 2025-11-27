@@ -231,6 +231,42 @@
 			</div>
 		</div>
 	</div>
+
+	<!-- Section 6 -->
+	 <div class="p-20 flex items-center gap-x-10">
+		<div class="w-[50%]">
+			<p class="text-4xl leading-15 font-semibold">Boost Your Skills & Prepare Your Career with Skillhub</p>
+			<p class="text-lg text-[#4B4B4B] my-5">Skillhub is an exclusive online course platform integrated into the Career Support App, helping students develop abilities relevant to the working world flexibly and effectively.</p>
+
+			<button type="button" class="custom-button my-5">Learn More</button>
+
+			<div class="flex flex-col gap-y-6 mt-3">
+				<div class="custom-list-tile">
+					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<span class="text-[#171717] text-xl">Material tailored to students' career needs, from soft skills to technical skills</span>
+				</div>
+				<div class="custom-list-tile">
+					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<span class="text-[#171717] text-xl">Access anytime, anywhere, directly from the application</span>
+				</div>
+				<div class="custom-list-tile">
+					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<span class="text-[#171717] text-xl">Additional skills that make you more ready to face the working world</span>
+				</div>
+				<div class="custom-list-tile">
+					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<span class="text-[#171717] text-xl">Get a certificate after completing each course</span>
+				</div>
+				<div class="custom-list-tile">
+					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<span class="text-[#171717] text-xl">All skills and certificates are automatically recorded on the student's profile</span>
+				</div>
+			</div>
+		</div>
+		<div class="w-[50%]">
+			<img src="@/assets/images/skillhub.png" alt="skillhub image" class="rounded-xl">
+		</div>
+	 </div>
 </template>
 
 <script lang="ts" setup></script>
