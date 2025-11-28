@@ -312,6 +312,48 @@
 		</div>
 	</div>
 
+	<!-- Section 8 -->
+	 <div class="w-full bg-[#195699] p-20 flex flex-col items-center">
+		<p class="text-4xl leading-15 font-semibold text-white">Career Success Stories & Real Impact of Career Support</p>
+		<p class="text-lg text-[#4B4B4B] my-5 text-white">See how Career Support helps students, alumni, and schools build careers, access job opportunities, and develop skills in a real way.</p>
+
+		<div class="flex items-center gap-x-5 mb-5">
+			<button class="button-category" :class="{ active: activeCategory === 'problem' }" @click="setCategory('problem')">
+				Problem
+			</button>
+			<button class="button-category" :class="{ active: activeCategory === 'solution' }" @click="setCategory('solution')">
+				Solution
+			</button>
+			<button class="button-category" :class="{ active: activeCategory === 'results_impact' }" @click="setCategory('results_impact')">
+				Results & Impact
+			</button>
+		</div>
+
+		<div class="flex items-center gap-x-5 mt-5">
+			<button class="arrow-button" @click="previousSection8Slide">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<rect width="24" height="24" fill="none" />
+					<path fill="currentColor" fill-rule="evenodd" d="M15.488 4.43a.75.75 0 0 1 .081 1.058L9.988 12l5.581 6.512a.75.75 0 1 1-1.138.976l-6-7a.75.75 0 0 1 0-.976l6-7a.75.75 0 0 1 1.057-.081" clip-rule="evenodd" />
+				</svg>
+			</button>
+			<div class="bg-white flex align-start p-7 rounded-xl w-full gap-x-7">
+				<img :src="currentSection8Content?.img" alt="" class="w-[200px]">
+
+				<div>
+					<p class="text-3xl font-medium text-[#08151E] mb-5">{{ currentSection8Content?.title }}</p>
+					<p class="text-2xl text-[#4682C4] uppercase">{{ activeCategoryLabel }}</p>
+					<p class="text-[#504C4C] mt-5">{{ currentSection8Content?.description }}</p>
+				</div>
+			</div>
+			<button class="arrow-button" @click="nextSection8Slide">
+				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+					<rect width="24" height="24" fill="none" />
+					<path fill="currentColor" fill-rule="evenodd" d="M8.512 4.43a.75.75 0 0 1 1.057.082l6 7a.75.75 0 0 1 0 .976l-6 7a.75.75 0 0 1-1.138-.976L14.012 12L8.431 5.488a.75.75 0 0 1 .08-1.057" clip-rule="evenodd" />
+				</svg>
+			</button>
+		</div>
+	</div>
+
 	<!-- Section 9 -->
 	<div class="p-20">
 		<div class="pb-5">
@@ -427,7 +469,7 @@
 </template>
 
 <script lang="ts" setup>
-import { reactive, ref } from 'vue';
+import { reactive, ref, computed } from 'vue';
 
 const getImage = (path: string, n: number) => {
 	return new URL(`../assets/images/${path}/image_${n}.png`, import.meta.url).href
@@ -451,6 +493,46 @@ const previousSlide = () => {
 	}
 }
 
+// Section 8 carousel & category
+const activeCategory = ref<'problem' | 'solution' | 'results_impact'>('problem')
+const currentSection8Slide = ref(0)
+
+const activeCategoryLabel = computed(() => {
+	const labels: Record<string, string> = {
+		'problem': 'Problem',
+		'solution': 'Solution',
+		'results_impact': 'Results & Impact'
+	}
+	return labels[activeCategory.value]
+})
+
+const currentSection8Content = computed(() => {
+	return section8CardsContent[activeCategory.value][currentSection8Slide.value]
+})
+
+const setCategory = (category: 'problem' | 'solution' | 'results_impact') => {
+	activeCategory.value = category
+	currentSection8Slide.value = 0
+}
+
+const nextSection8Slide = () => {
+	const maxIndex = section8CardsContent[activeCategory.value].length - 1
+	if (currentSection8Slide.value >= maxIndex) {
+		currentSection8Slide.value = 0
+	} else {
+		currentSection8Slide.value++
+	}
+}
+
+const previousSection8Slide = () => {
+	const maxIndex = section8CardsContent[activeCategory.value].length - 1
+	if (currentSection8Slide.value <= 0) {
+		currentSection8Slide.value = maxIndex
+	} else {
+		currentSection8Slide.value--
+	}
+}
+
 const section7CardsContent = reactive([
 	{"title": "SMK YAJ Depok - Job Fair 2024", "img": new URL(`../assets/images/section7/1.png`, import.meta.url).href},
 	{"title": "SMKN 4 Jakarta - Job & Edu Fair 2024", "img": new URL(`../assets/images/section7/2.png`, import.meta.url).href},
@@ -461,6 +543,27 @@ const section7CardsContent = reactive([
 	{"title": "SMK Islam PB Soedirman 2 - Career Day 2024", "img": new URL(`../assets/images/section7/7.png`, import.meta.url).href},
 	{"title": "SMK Telkom Bandung - Job Fair 2024", "img": new URL(`../assets/images/section7/8.png`, import.meta.url).href},
 ])
+
+const section8CardsContent = reactive({
+	"problem": [
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "The rapid development of technology requires all of us to keep up with every development, especially in the world of education. Digital technology-based teaching and learning systems should be able to produce higher quality human resources. For this reason, labor absorption is an important matter to encourage change in a person's life and also improve the national economy. However, in reality, schools still face various obstacles in keeping up with current technological developments. Uneven distribution of professional career training Still using conventional methods in student/alumni data collection"},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Labor absorption is an important matter to encourage change in a person's life. If a student gets a job they like and that matches their interests and talents, they will certainly perform their job well. And as time goes on, the company will increase their income and welfare as a result of their hard work and effort. High income will certainly provide welfare for their family and can help boost Indonesia's economic growth. To achieve this, schools still have several obstacles, namely: Schools find it difficult to obtain job vacancy information Difficult to reach alumni"},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "The main problem faced by the school is the low career preparation of students, which impacts the difficulty in increasing the labor absorption rate. The student database, which has only focused on personal data and not career data, has also become a challenge for the Special Job Exchange (BKK) of SMK Nasional Depok in providing career guidance to students."},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "One solution to help students find jobs is through job fair activities. This activity is a program held by Higher Education Institutions to connect several companies providing job opportunities with students/alumni seeking employment. However, universities face many obstacles in organizing Job Fairs, especially during the Covid-19 pandemic. Difficulty reaching companies for the Job Fair Limited job fair implementation system Unable to hold job fairs during the pandemic"},
+	],
+	"solution": [
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "In order to equally distribute professional career training to all students, the school uses Career Support with the E-learning feature, which is a digital-based career learning platform according to the curriculum as a form of career assistance for students/alumni. In this feature, students/alumni will attend classes/training with various topics like Soft Skills and career skills, an overview of the world of work today, CV creation practices, up to simulation interviews. The module and curriculum, which are classified as easy to beginners, ensure students/alumni receive insights about career planning to prepare themselves more thoroughly. In addition, the services provided by Career Support can change the previous system, which was conventional or paper-based, by digitizing 90% of student/alumni data and integrating the database feature. This feature will certainly make it easier for schools to collect data and map the potential of students/alumni, especially in terms of career profiles."},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Career Support helps schools by providing the latest and accurate job vacancy information from partner companies. The latest and accurate job vacancies will be sent weekly in the form of a job poster or can be viewed directly on the student/alumni portal in real-time, to facilitate students and alumni in accessing job applications. In addition to improving the quality of student readiness in the recruitment process, Career Support also provides curriculum, training, or career mentoring with experienced partners and mentors so that students are more prepared during the recruitment process. The difficulty of reaching alumni is overcome with the tracer study feature owned by Career Support. This feature allows schools to gather information and evaluation materials about graduates. In addition, BKK (Job Exchange) can communicate with alumni through the message feature owned by Career Support, so that the BKK will remain connected to the alumni for tracer study data collection purposes."},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "Career Support with its career preparation curriculum assists students in determining their career planning after graduation, with options including: working, continuing studies, or entrepreneurship. This curriculum serves as a reference for organizing the Career Guidance Workshop at SMK Nasional Depok. Career Support also recommends that a Career Guidance Workshop program like this be held in the second year rather than the third, so that students have enough time to prepare for their careers. In addition, the services provided by Career Support can also change the previous system, which still used conventional or paper-based methods, by digitizing 90% of the integrated student/alumni data collection system using the database feature. This feature will certainly make it easier for schools to collect data and map the potential of students/alumni, especially in terms of career readiness profiles."},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "One of the Career Support features that can help Higher Education Institutions is the Virtual Job Fair feature. This feature assists Higher Education Institutions in preparing, executing, and managing virtual job fair activities, whether fully virtual or hybrid. Through this feature, Career Support will help Higher Education Institutions by providing a dedicated virtual job fair website, promotion to companies, managing pre-event activities (workshops, webinars, etc.), up to the registration of applicants and participating companies. The job fair feature will assist Higher Education Institutions because it will simplify the process of creating a Job Fair with a system that is integrated between the university's career center portal, students/alumni, and participating job fair companies."},
+	],
+	"results_impact": [
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "The BKK (Job Exchange) provides evidence-based career guidance services obtained from the results of the student/alumni career profile mapping class. Student career readiness has increased by 80% through the e-learning career preparation and recruitment features. The student and alumni data collection process is carried out 100% digitally."},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Job vacancy information increased by 120% within one month. Facilitates students in obtaining job vacancy information in real-time. The tracer study system and management are carried out 100% digitally with a more modern system."},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "The percentage of students who already have a career choice in the third year (Grade XII) increased to 78%. This allows students to have more mature career planning. The implementation of data-based career guidance that encourages the objectivity of the BKK (Job Exchange) in providing direction to students."},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "100% digital job fair management system. Availability of a special job fair website that helps with the branding of the job fair activity. The number of participating companies in the job fair increased up to 60%. The number of applicants from students/alumni increased up to 83%. Cost savings from the execution of the job fair activity compared to the previous year, up to 64%."},
+	],
+})
 </script>
 
 <style scoped>
@@ -543,5 +646,24 @@ const section7CardsContent = reactive([
 
 .arrow-button:hover {
 	background-color: #F0F4F8;
+}
+
+.button-category {
+	background-color: white;
+	border-radius: 1rem;
+	border: 1px solid #E3E3E3;
+	color: #504C4C;
+
+	padding: 1rem 2rem;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+}
+
+.button-category:hover {
+	background-color: #F0F4F8;
+}
+
+.button-category.active {
+	color: #ED1966;
 }
 </style>
