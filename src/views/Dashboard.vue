@@ -336,7 +336,7 @@
 					<path fill="currentColor" fill-rule="evenodd" d="M15.488 4.43a.75.75 0 0 1 .081 1.058L9.988 12l5.581 6.512a.75.75 0 1 1-1.138.976l-6-7a.75.75 0 0 1 0-.976l6-7a.75.75 0 0 1 1.057-.081" clip-rule="evenodd" />
 				</svg>
 			</button>
-			<div class="bg-white flex align-start p-7 rounded-xl w-full gap-x-7">
+			<div class="bg-white flex align-start p-7 rounded-xl w-full gap-x-7 h-[308px]">
 				<img :src="currentSection8Content?.img" alt="" class="w-[200px]">
 
 				<div>
@@ -395,7 +395,7 @@
 			career development, ranging from workshops, webinars, to job fairs and skill training.</p>
 
 		<div class="flex items-center justify-center gap-x-5 mt-5">
-			<div class="custom-card">
+			<div class="custom-card h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Job Fair 2026</p>
@@ -418,7 +418,7 @@
 					<span>Sold Out</span>
 				</button>
 			</div>
-			<div class="custom-card">
+			<div class="custom-card h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Webinar CV Klinik untuk Mahasiswa</p>
@@ -441,7 +441,7 @@
 					<span>Join</span>
 				</button>
 			</div>
-			<div class="custom-card">
+			<div class="custom-card h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Webinar 01: Tips interview agar dilirik HR</p>
@@ -595,7 +595,7 @@ const section8CardsContent = reactive({
 }
 
 .custom-card {
-	width: 400px;
+	width: 350px;
 	background-color: white;
 	padding: 1rem;
 	border-radius: 1.25rem;
