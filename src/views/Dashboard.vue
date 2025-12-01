@@ -1,14 +1,11 @@
 <template>
 	<!-- Section 1 -->
 	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl">
-		<span class="text-[#155DFC]">#1 Career Center Platform in Indonesia</span>
+		<span class="text-[#155DFC]">{{ $t('home.first_career_center') }}</span>
 
-		<p class="text-[#08151E] font-semibold text-6xl my-5">Ready to Develop Your Career? <br /> Start the First Step
-			with the Career Support App</p>
+		<p class="text-[#08151E] font-semibold text-6xl my-5" v-html="$t('home.ready_to_develop')"></p>
 
-		<p class="text-[#818C9F]">Career Support App is a digital career platform that helps students create
-			professional profiles, access internship & job vacancies, and develop skills through online courses in
-			Skillhub. All from one application!</p>
+		<p class="text-[#818C9F]">{{ $t('home.career_support_app_description') }}</p>
 
 		<div class="flex justify-center gap-x-5 mt-10">
 			<button type="button" class="custom-button">Career Support App</button>
@@ -19,27 +16,25 @@
 	</div>
 
 	<!-- Section 2 -->
-	<p class="text-4xl leading-15 font-semibold text-center mt-20 mb-5 text-[#12141D]">Why is an All-In-One Career
-		Center <br />Management Platform Important?</p>
-	<p class="text-center text-[#4B4B4B] mb-15">Various needs can be answered with one digital platform. Career Support
-		helps you improve the performance <br /> of your career center with the spirit of Go Digital and National.</p>
+	<p class="text-4xl leading-15 font-semibold text-center mt-20 mb-5 text-[#12141D]" v-html="$t('home.why_aio_career')"></p>
+	<p class="text-center text-[#4B4B4B] mb-15 mx-85">{{ $t('home.various_needs') }}</p>
 
 	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl grid grid-cols-4 gap-x-15">
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">92%</p>
-			<p class="text-sm text-[#1D3752]">The number of relevant job vacancy information is minimal</p>
+			<p class="text-sm text-[#1D3752]">{{ $t('home.number_of_relevant_jobs') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">83%</p>
-			<p class="text-sm text-[#1D3752]">Corporate partnership networks are difficult to access</p>
+			<p class="text-sm text-[#1D3752]">{{ $t('home.corporate_partnership') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">80%</p>
-			<p class="text-sm text-[#1D3752]">Student & alumni database is incomplete</p>
+			<p class="text-sm text-[#1D3752]">{{ $t('home.stundent_n_alumni_database') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">76%</p>
-			<p class="text-sm text-[#1D3752]">Skill training for students & alumni is still lacking</p>
+			<p class="text-sm text-[#1D3752]">{{ $t('home.skill_training_for_student') }}</p>
 		</div>
 	</div>
 
@@ -47,40 +42,34 @@
 	<div class="my-20 mx-20 flex items-start">
 		<img src="@/assets/images/section3.png" alt="phone image" style="height: 725px;">
 		<div class="text-[#171717] ml-15 flex flex-col items-start">
-			<p class="text-4xl leading-15 font-semibold text-center">What Can You Do on <br /> Career Support App?</p>
-			<p class="text-xl my-5">Create a profile, apply for jobs, and study online easily, anytime, and anywhere!
-			</p>
+			<p class="text-4xl leading-15 font-semibold">{{ $t('home.what_you_can_do') }}</p>
+			<p class="text-xl my-5">{{ $t('home.create_profile_apply_jobs') }}</p>
 
 			<div class="flex justify-center gap-x-5">
-				<button type="button" class="custom-button">Download for iOS</button>
-				<button type="button" class="custom-button">Download for Android</button>
+				<button type="button" class="custom-button">{{ $t('home.download_for_ios') }}</button>
+				<button type="button" class="custom-button">{{ $t('home.download_for_android') }}</button>
 			</div>
 
 			<div class="flex flex-col gap-y-6 mt-5">
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Apply for jobs and internships directly through the
-						application, without hassle</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.apply_for_jobs') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Create an automatic CV, showcase skills and achievements, ready
-						to be viewed by companies</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.create_automatic_cv') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Find job opportunities according to your major and
-						interests</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.find_job_opportunities') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Participate in job fairs to increase job opportunities in
-						companies</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.participate_in_job_fairs') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Take exclusive online courses for job preparation and skill
-						development</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.take_exclusive_courses') }}</span>
 				</div>
 			</div>
 		</div>
@@ -88,13 +77,10 @@
 
 	<!-- Section 4 -->
 	<div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-center">Career Support for Schools</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">In addition to supporting students individually, the Career
-			Support App also helps schools build a professional career center. All student and alumni career data can be
-			easily monitored, while simultaneously connecting them to job and internship opportunities from partner
-			companies.</p>
+		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.career_support_app_for_schools') }}</p>
+		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
-		<button type="button" class="custom-button pill my-8">Register Now!</button>
+		<button type="button" class="custom-button pill my-8">{{ $t('home.register_now') }}!</button>
 
 		<div class="flex gap-x-5 w-full">
 			<div class="bg-white p-5 rounded-xl w-full">
@@ -110,10 +96,8 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">Monitor Student Development in Real-Time</p>
-				<p class="text-[#8A8A8A] mt-3">With the Career Support dashboard, guidance counselors, and career staff
-					can see the development of skills, activities, and student achievements at any time. No more data
-					loss or difficulty monitoring alumni.</p>
+				<p class="text-xl font-semibold">{{ $t('home.monitor_student_development') }}</p>
+				<p class="text-[#8A8A8A] mt-3">{{ $t('home.with_the_career_support_dashboard') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -127,10 +111,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">Complete & Professional Career Portal</p>
-				<p class="text-[#8A8A8A] mt-3">Schools can build a modern and intuitive career center website, complete
-					with student profiles, vacancies, career articles, and activity announcements. Everything looks
-					professional without having to incur large design costs.</p>
+				<p class="text-xl font-semibold">{{ $t('home.complete_professional_career_portal') }}</p>
+				<p class="text-[#8A8A8A] mt-3">{{ $t('home.schools_can_build') }}</p>
 			</div>
 		</div>
 		<div class="flex gap-x-5 w-full my-5">
@@ -147,9 +129,8 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">Connect Students to Industry & Partner Companies</p>
-				<p class="text-[#8A8A8A] mt-3">Schools can directly connect students with internship or job
-					opportunities from partner companies, so students have faster access to the real working world.</p>
+				<p class="text-xl font-semibold">{{ $t('home.connect_students_to_industry') }}</p>
+				<p class="text-[#8A8A8A] mt-3">{{ $t('home.schools_can_directly_connect') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -163,10 +144,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">Integrated Alumni Data</p>
-				<p class="text-[#8A8A8A] mt-3">Track alumni and their career development with an automatic tracer study
-					feature. This data can be used for school program evaluation, curriculum improvement, and
-					accreditation reports.</p>
+				<p class="text-xl font-semibold">{{ $t('home.integrated_alumni_data') }}</p>
+				<p class="text-[#8A8A8A] mt-3">{{ $t('home.track_alumni_and_their_career_development') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -180,21 +159,16 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">Full Support & Guidance</p>
-				<p class="text-[#8A8A8A] mt-3">Career Support provides comprehensive guidance for schools to manage the
-					career portal, maximize application usage, and connect students to Skillhub for additional skill
-					development.</p>
+				<p class="text-xl font-semibold">{{ $t('home.full_support_and_guidance') }}</p>
+				<p class="text-[#8A8A8A] mt-3">{{ $t('home.career_support_provides_comprehensive') }}</p>
 			</div>
 		</div>
 	</div>
 
 	<!-- Section 5 -->
 	<div class="p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-center">Confused about Choosing the Right Service for Your
-			Career Center Needs? Don't Worry!</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">In addition to supporting students individually, Career
-			Support helps schools create a professional career center. All student and alumni data can be monitored and
-			it makes it easier for them to connect to job and internship opportunities from partner companies.</p>
+		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.confused_about_choosing_service') }}</p>
+		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
 		<div class="flex gap-x-5 w-full mt-5">
 			<div class="bg-white border border-[#E3E3E3] p-5 rounded-xl w-full flex flex-col items-center">
@@ -210,10 +184,10 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">Join the School Portal</p>
-				<p class="text-[#8A8A8A] my-3">Find a service that suits your needs</p>
+				<p class="text-xl font-semibold">{{ $t('home.join_the_school_portal') }}</p>
+				<p class="text-[#8A8A8A] my-3">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
 
-				<button type="button" class="custom-button pill my-4">Register Now</button>
+				<button type="button" class="custom-button pill my-4">{{ $t('home.register_now') }}</button>
 			</div>
 			<div class="bg-white border border-[#E3E3E3] p-5 rounded-xl w-full flex flex-col items-center">
 				<div
@@ -227,10 +201,10 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">Free Consultation</p>
-				<p class="text-[#8A8A8A] my-3">Our school consultant is ready to help you</p>
+				<p class="text-xl font-semibold">{{ $t('home.free_consultation') }}</p>
+				<p class="text-[#8A8A8A] my-3">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
 
-				<button type="button" class="custom-button pill my-4">Register Now</button>
+				<button type="button" class="custom-button pill my-4">{{ $t('home.contact_us') }}</button>
 			</div>
 		</div>
 	</div>
@@ -238,36 +212,31 @@
 	<!-- Section 6 -->
 	<div class="p-20 flex items-center gap-x-10">
 		<div class="w-[50%]">
-			<p class="text-4xl leading-15 font-semibold">Boost Your Skills & Prepare Your Career with Skillhub</p>
-			<p class="text-lg text-[#4B4B4B] my-5">Skillhub is an exclusive online course platform integrated into the
-				Career Support App, helping students develop abilities relevant to the working world flexibly and
-				effectively.</p>
+			<p class="text-4xl leading-15 font-semibold">{{ $t('home.boost_your_skills') }}</p>
+			<p class="text-lg text-[#4B4B4B] my-5">{{ $t('home.skillhub_description') }}</p>
 
-			<button type="button" class="custom-button my-5">Learn More</button>
+			<button type="button" class="custom-button my-5">{{ $t('home.learn_more') }}</button>
 
 			<div class="flex flex-col gap-y-6 mt-3">
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Material tailored to students' career needs, from soft skills
-						to technical skills</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.material_tailored') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Access anytime, anywhere, directly from the application</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.access_anytime') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Additional skills that make you more ready to face the working
-						world</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.additional_skills') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">Get a certificate after completing each course</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.get_certificate') }}</span>
 				</div>
 				<div class="custom-list-tile">
 					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
-					<span class="text-[#171717] text-xl">All skills and certificates are automatically recorded on the
-						student's profile</span>
+					<span class="text-[#171717] text-xl">{{ $t('home.skills_certificates_recorded') }}</span>
 				</div>
 			</div>
 		</div>
@@ -278,8 +247,8 @@
 
 	<!-- Section 7 -->
 	 <div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-center">Connecting Students with the World of Work: Career Support Activities & Achievements</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">Career Support actively supports students and schools through various real programs, activities, and collaborations, thereby building a more complete career experience.</p>
+		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.connecting_students_with_world_of_work') }}</p>
+		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.career_support_actively_supports') }}</p>
 
 		<div class="flex items-center gap-x-5">
 			<button class="arrow-button" @click="previousSlide">
@@ -314,18 +283,18 @@
 
 	<!-- Section 8 -->
 	 <div class="w-full bg-[#195699] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-white">Career Success Stories & Real Impact of Career Support</p>
-		<p class="text-lg text-[#4B4B4B] my-5 text-white">See how Career Support helps students, alumni, and schools build careers, access job opportunities, and develop skills in a real way.</p>
+		<p class="text-4xl leading-15 font-semibold text-white">{{ $t('home.career_success_stories') }}</p>
+		<p class="text-lg text-[#4B4B4B] my-5 text-white text-center">{{ $t('home.see_how_career_support_helps') }}</p>
 
 		<div class="flex items-center gap-x-5 mb-5">
 			<button class="button-category" :class="{ active: activeCategory === 'problem' }" @click="setCategory('problem')">
-				Problem
+				{{ $t('home.problem') }}
 			</button>
 			<button class="button-category" :class="{ active: activeCategory === 'solution' }" @click="setCategory('solution')">
-				Solution
+				{{ $t('home.solution') }}
 			</button>
 			<button class="button-category" :class="{ active: activeCategory === 'results_impact' }" @click="setCategory('results_impact')">
-				Results & Impact
+				{{ $t('home.results_impact') }}
 			</button>
 		</div>
 
@@ -339,10 +308,10 @@
 			<div class="bg-white flex align-start p-7 rounded-xl w-full gap-x-7 h-[308px]">
 				<img :src="currentSection8Content?.img" alt="" class="w-[200px]">
 
-				<div>
+				<div class="overflow-y-scroll">
 					<p class="text-3xl font-medium text-[#08151E] mb-5">{{ currentSection8Content?.title }}</p>
 					<p class="text-2xl text-[#4682C4] uppercase">{{ activeCategoryLabel }}</p>
-					<p class="text-[#504C4C] mt-5">{{ currentSection8Content?.description }}</p>
+					<p class="text-[#504C4C] mt-5">{{ $t(currentSection8Content.description) }}</p>
 				</div>
 			</div>
 			<button class="arrow-button" @click="nextSection8Slide">
@@ -357,9 +326,8 @@
 	<!-- Section 9 -->
 	<div class="p-20">
 		<div class="pb-5">
-			<p class="text-4xl leading-15 font-semibold text-center">Institutional Partners</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">Institutions that have collaborated and are integrated
-				with Career Support.</p>
+			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.institutional_partners') }}</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.institutions_collaborated') }}</p>
 
 			<div class="flex items-center justify-evenly">
 				<img v-for="n in Array.from({ length: 8 }, (v, i) => i + 1)" :key="n"
@@ -367,9 +335,8 @@
 			</div>
 		</div>
 		<div class="py-5">
-			<p class="text-4xl leading-15 font-semibold text-center">School Partners</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">Schools that have actively partnered with Career Support
-				to build a digital career center and monitor the development of students and alumni.</p>
+			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.school_partners') }}</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.schools_collaborated') }}</p>
 
 			<div class="flex items-center justify-evenly">
 				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n"
@@ -377,9 +344,8 @@
 			</div>
 		</div>
 		<div>
-			<p class="text-4xl leading-15 font-semibold text-center">Company Partners</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">Companies that provide job vacancies and support career
-				activities for students.</p>
+			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.company_partners') }}</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.companies_collaborated') }}</p>
 
 			<div class="flex items-center justify-evenly">
 				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n"
@@ -390,9 +356,8 @@
 
 	<!-- Section 10 -->
 	<div class="w-full bg-[#195699] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-white">Don't Miss Upcoming Events & Activities!</p>
-		<p class="text-lg text-[#4B4B4B] my-5 text-white">Career Support regularly organizes events to support students'
-			career development, ranging from workshops, webinars, to job fairs and skill training.</p>
+		<p class="text-4xl leading-15 font-semibold text-white">{{ $t('home.dont_miss_upcoming_events') }}!</p>
+		<p class="text-lg text-[#4B4B4B] my-5 text-white text-center">{{ $t('home.career_support_regularly_organizes') }}</p>
 
 		<div class="flex items-center justify-center gap-x-5 mt-5">
 			<div class="custom-card h-[452px]">
@@ -470,6 +435,9 @@
 
 <script lang="ts" setup>
 import { reactive, ref, computed } from 'vue';
+import { useI18n } from 'vue-i18n';
+
+const { t } = useI18n()
 
 const getImage = (path: string, n: number) => {
 	return new URL(`../assets/images/${path}/image_${n}.png`, import.meta.url).href
@@ -499,9 +467,9 @@ const currentSection8Slide = ref(0)
 
 const activeCategoryLabel = computed(() => {
 	const labels: Record<string, string> = {
-		'problem': 'Problem',
-		'solution': 'Solution',
-		'results_impact': 'Results & Impact'
+		'problem': t('home.problem'),
+		'solution': t('home.solution'),
+		'results_impact': t('home.results_impact')
 	}
 	return labels[activeCategory.value]
 })
@@ -546,22 +514,22 @@ const section7CardsContent = reactive([
 
 const section8CardsContent = reactive({
 	"problem": [
-		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "The rapid development of technology requires all of us to keep up with every development, especially in the world of education. Digital technology-based teaching and learning systems should be able to produce higher quality human resources. For this reason, labor absorption is an important matter to encourage change in a person's life and also improve the national economy. However, in reality, schools still face various obstacles in keeping up with current technological developments. Uneven distribution of professional career training Still using conventional methods in student/alumni data collection"},
-		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Labor absorption is an important matter to encourage change in a person's life. If a student gets a job they like and that matches their interests and talents, they will certainly perform their job well. And as time goes on, the company will increase their income and welfare as a result of their hard work and effort. High income will certainly provide welfare for their family and can help boost Indonesia's economic growth. To achieve this, schools still have several obstacles, namely: Schools find it difficult to obtain job vacancy information Difficult to reach alumni"},
-		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "The main problem faced by the school is the low career preparation of students, which impacts the difficulty in increasing the labor absorption rate. The student database, which has only focused on personal data and not career data, has also become a challenge for the Special Job Exchange (BKK) of SMK Nasional Depok in providing career guidance to students."},
-		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "One solution to help students find jobs is through job fair activities. This activity is a program held by Higher Education Institutions to connect several companies providing job opportunities with students/alumni seeking employment. However, universities face many obstacles in organizing Job Fairs, especially during the Covid-19 pandemic. Difficulty reaching companies for the Job Fair Limited job fair implementation system Unable to hold job fairs during the pandemic"},
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "home.section_8_desc.problem.0"},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "home.section_8_desc.problem.1"},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "home.section_8_desc.problem.2"},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "home.section_8_desc.problem.3"},
 	],
 	"solution": [
-		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "In order to equally distribute professional career training to all students, the school uses Career Support with the E-learning feature, which is a digital-based career learning platform according to the curriculum as a form of career assistance for students/alumni. In this feature, students/alumni will attend classes/training with various topics like Soft Skills and career skills, an overview of the world of work today, CV creation practices, up to simulation interviews. The module and curriculum, which are classified as easy to beginners, ensure students/alumni receive insights about career planning to prepare themselves more thoroughly. In addition, the services provided by Career Support can change the previous system, which was conventional or paper-based, by digitizing 90% of student/alumni data and integrating the database feature. This feature will certainly make it easier for schools to collect data and map the potential of students/alumni, especially in terms of career profiles."},
-		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Career Support helps schools by providing the latest and accurate job vacancy information from partner companies. The latest and accurate job vacancies will be sent weekly in the form of a job poster or can be viewed directly on the student/alumni portal in real-time, to facilitate students and alumni in accessing job applications. In addition to improving the quality of student readiness in the recruitment process, Career Support also provides curriculum, training, or career mentoring with experienced partners and mentors so that students are more prepared during the recruitment process. The difficulty of reaching alumni is overcome with the tracer study feature owned by Career Support. This feature allows schools to gather information and evaluation materials about graduates. In addition, BKK (Job Exchange) can communicate with alumni through the message feature owned by Career Support, so that the BKK will remain connected to the alumni for tracer study data collection purposes."},
-		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "Career Support with its career preparation curriculum assists students in determining their career planning after graduation, with options including: working, continuing studies, or entrepreneurship. This curriculum serves as a reference for organizing the Career Guidance Workshop at SMK Nasional Depok. Career Support also recommends that a Career Guidance Workshop program like this be held in the second year rather than the third, so that students have enough time to prepare for their careers. In addition, the services provided by Career Support can also change the previous system, which still used conventional or paper-based methods, by digitizing 90% of the integrated student/alumni data collection system using the database feature. This feature will certainly make it easier for schools to collect data and map the potential of students/alumni, especially in terms of career readiness profiles."},
-		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "One of the Career Support features that can help Higher Education Institutions is the Virtual Job Fair feature. This feature assists Higher Education Institutions in preparing, executing, and managing virtual job fair activities, whether fully virtual or hybrid. Through this feature, Career Support will help Higher Education Institutions by providing a dedicated virtual job fair website, promotion to companies, managing pre-event activities (workshops, webinars, etc.), up to the registration of applicants and participating companies. The job fair feature will assist Higher Education Institutions because it will simplify the process of creating a Job Fair with a system that is integrated between the university's career center portal, students/alumni, and participating job fair companies."},
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "home.section_8_desc.solution.0"},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "home.section_8_desc.solution.1"},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "home.section_8_desc.solution.2"},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "home.section_8_desc.solution.3"},
 	],
 	"results_impact": [
-		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "The BKK (Job Exchange) provides evidence-based career guidance services obtained from the results of the student/alumni career profile mapping class. Student career readiness has increased by 80% through the e-learning career preparation and recruitment features. The student and alumni data collection process is carried out 100% digitally."},
-		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "Job vacancy information increased by 120% within one month. Facilitates students in obtaining job vacancy information in real-time. The tracer study system and management are carried out 100% digitally with a more modern system."},
-		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "The percentage of students who already have a career choice in the third year (Grade XII) increased to 78%. This allows students to have more mature career planning. The implementation of data-based career guidance that encourages the objectivity of the BKK (Job Exchange) in providing direction to students."},
-		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "100% digital job fair management system. Availability of a special job fair website that helps with the branding of the job fair activity. The number of participating companies in the job fair increased up to 60%. The number of applicants from students/alumni increased up to 83%. Cost savings from the execution of the job fair activity compared to the previous year, up to 64%."},
+		{"img": new URL(`../assets/images/section8/1.png`, import.meta.url).href, "title": "SMK Nasional Depok", "description": "home.section_8_desc.results_impact.0"},
+		{"img": new URL(`../assets/images/section8/2.png`, import.meta.url).href, "title": "SMK Prestasi Prima", "description": "home.section_8_desc.results_impact.1"},
+		{"img": new URL(`../assets/images/section8/3.png`, import.meta.url).href, "title": "SMK Islam Malahayati", "description": "home.section_8_desc.results_impact.2"},
+		{"img": new URL(`../assets/images/section8/4.png`, import.meta.url).href, "title": "Universitas Mikroskil", "description": "home.section_8_desc.results_impact.3"},
 	],
 })
 </script>

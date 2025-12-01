@@ -15,8 +15,8 @@ const i18n = createI18n({
   // Composition API mode is required for Nuxt/Vue 3
   legacy: false,
   globalInjection: true,
-  locale: 'en', // Initial locale
-  fallbackLocale: 'en',
+  locale: 'id', // Initial locale
+  fallbackLocale: 'id',
   // Initialize with empty messages to be filled dynamically
   messages: {}
 });

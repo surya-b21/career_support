@@ -6,15 +6,15 @@
 
 				<div
 				class="flex gap-x-3 items-center text-[#195699] absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-				<a href="#">Students/Alumni</a>
-				<a href="#">School/Higher Education</a>
-				<a href="#">Company</a>
+				<a href="#">{{ $t('nav.student') }}</a>
+				<a href="#">{{ $t('nav.school') }}</a>
+				<a href="#">{{ $t('nav.company') }}</a>
 			</div>
 
 				<div class="flex items-center absolute right-5 top-1/2 -translate-y-1/2 ">
-				<select name="lang" class="mr-3">
+				<select name="lang" class="mr-3" v-model="currentLocale" @change="changeLocale">
 					<option value="en">English</option>
-					<option value="fr">ID</option>
+					<option value="id">Bahasa Indonesia</option>
 				</select>
 				<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24">
 					<rect width="24" height="24" fill="none" />
@@ -65,21 +65,21 @@
 					</div>
 
 					<div class="text-[#818C9F]">
-						<p class="font-medium">Services</p>
-						<p class="mt-3 text-sm cursor-pointer">Industry Collaboration - Educational Institutions</p>
-						<p class="mt-3 text-sm cursor-pointer">Entrepreneurship Incubation</p>
-						<p class="mt-3 text-sm cursor-pointer">Training and Skills Development</p>
-						<p class="mt-3 text-sm cursor-pointer">Technology Integration</p>
+						<p class="font-medium">{{ $t('footer.services') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.industry_educational') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.entrepreneurship_incubation') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.training_skill_development') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.technology_integration') }}</p>
 					</div>
 
 					<div class="text-[#818C9F]">
-						<p class="font-medium">Partnership</p>
-						<p class="mt-3 text-sm cursor-pointer">Schools & Universities</p>
-						<p class="mt-3 text-sm cursor-pointer">Companies</p>
+						<p class="font-medium">{{ $t('footer.partnership') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.school_university') }}</p>
+						<p class="mt-3 text-sm cursor-pointer">{{ $t('footer.companies') }}</p>
 					</div>
 
 					<div class="text-[#818C9F]">
-						<p class="font-medium">Registered & Member of</p>
+						<p class="font-medium">{{ $t('footer.registered_member') }}</p>
 						<img src="@/assets/images/komdigi.png" alt="komdigi" class="mt-5" style="height: 50px;">
 						<img src="@/assets/images/kemenko.png" alt="kemenko" style="height: 150px;">
 						<img src="@/assets/images/kadin.png" alt="kadin" style="height: 75px;">
@@ -90,18 +90,25 @@
 					<hr class="border-[#818C9F] mb-10" />
 
 					<p class="text-sm text-[#818C9F] mb-8">Copyright 2025 © Career Support - PT. Global Digital Pro</p>
-					<p class="text-sm text-[#818C9F]">A complete solution for student career guidance, job fairs, school
-						career center systems & corporate CSR. Don't let students just graduate! Produce ready-to-work
-						graduates with Career Support. Create the best career ecosystem with a modern and integrated
-						school
-						career center.</p>
+					<p class="text-sm text-[#818C9F]">{{ $t('footer.complete_solution') }}</p>
 				</div>
 			</footer>
 		</div>
 	</div>
 </template>
 
-<script lang="ts" setup></script>
+<script lang="ts" setup>
+import { ref } from 'vue'
+import { useI18n } from 'vue-i18n'
+import { setI18nLanguage } from '@/plugins/i18n'
+
+const { locale } = useI18n()
+const currentLocale = ref(locale.value)
+
+const changeLocale = async () => {
+	await setI18nLanguage(currentLocale.value)
+}
+</script>
 
 <style scoped>
 .navbar {
