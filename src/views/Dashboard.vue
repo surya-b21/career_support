@@ -3,11 +3,11 @@
 	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl">
 		<span class="text-[#155DFC]">{{ $t('home.first_career_center') }}</span>
 
-		<p class="text-[#08151E] font-semibold text-6xl my-5" v-html="$t('home.ready_to_develop')"></p>
+		<p class="text-[#08151E] font-semibold text-2xl md:text-6xl my-5" v-html="$t('home.ready_to_develop')"></p>
 
 		<p class="text-[#818C9F]">{{ $t('home.career_support_app_description') }}</p>
 
-		<div class="flex justify-center gap-x-5 mt-10">
+		<div class="flex flex-col md:flex-row justify-center gap-y-5 md:gap-y-0 gap-x-5 mt-10">
 			<button type="button" class="custom-button">Career Support App</button>
 			<button type="button" class="custom-button">School Portal</button>
 		</div>
@@ -16,10 +16,12 @@
 	</div>
 
 	<!-- Section 2 -->
-	<p class="text-4xl leading-15 font-semibold text-center mt-20 mb-5 text-[#12141D]" v-html="$t('home.why_aio_career')"></p>
-	<p class="text-center text-[#4B4B4B] mb-15 mx-85">{{ $t('home.various_needs') }}</p>
+	<div class="flex flex-col">
+		<p class="text-xl md:text-4xl md:leading-15 font-semibold text-center mt-5 md:mt-20 mb-5 text-[#12141D]" v-html="$t('home.why_aio_career')"></p>
+		<p class="text-center text-[#4B4B4B] mb-5 md:mb-15 mx-0 md:mx-85">{{ $t('home.various_needs') }}</p>
+	</div>
 
-	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl grid grid-cols-4 gap-x-15">
+	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl grid grid-cols-1 md:grid-cols-4 gap-x-0 md:gap-x-15 gap-y-10 md:gap-y-0">
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">92%</p>
 			<p class="text-sm text-[#1D3752]">{{ $t('home.number_of_relevant_jobs') }}</p>
@@ -39,36 +41,36 @@
 	</div>
 
 	<!-- Section 3 -->
-	<div class="my-20 mx-20 flex items-start">
-		<img src="@/assets/images/section3.png" alt="phone image" style="height: 725px;">
-		<div class="text-[#171717] ml-15 flex flex-col items-start">
-			<p class="text-4xl leading-15 font-semibold">{{ $t('home.what_you_can_do') }}</p>
-			<p class="text-xl my-5">{{ $t('home.create_profile_apply_jobs') }}</p>
+	<div class="m-5 md:m-20 flex items-start">
+		<img src="@/assets/images/section3.png" alt="phone image" class="hidden md:block" style="height: 725px;">
+		<div class="text-[#171717] md:ml-15 flex flex-col items-start">
+			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center md:text-left">{{ $t('home.what_you_can_do') }}</p>
+			<p class="text-xl my-5 text-center md:text-left">{{ $t('home.create_profile_apply_jobs') }}</p>
 
-			<div class="flex justify-center gap-x-5">
+			<div class="flex flex-col md:flex-row justify-center md:gap-x-5 gap-y-5 md:gap-y-0 mx-auto md:mx-0">
 				<button type="button" class="custom-button">{{ $t('home.download_for_ios') }}</button>
 				<button type="button" class="custom-button">{{ $t('home.download_for_android') }}</button>
 			</div>
 
 			<div class="flex flex-col gap-y-6 mt-5">
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-5 h-2.5 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.apply_for_jobs') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-6 h-2.5 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.create_automatic_cv') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-4 h-2.5 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.find_job_opportunities') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-5 h-2.5 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.participate_in_job_fairs') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-6 h-2.5 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.take_exclusive_courses') }}</span>
 				</div>
 			</div>
