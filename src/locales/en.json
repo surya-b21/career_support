@@ -87,13 +87,10 @@
         "career_support_regularly_organizes": "Career Support regularly organizes events to support students' career development, ranging from workshops, webinars, to job fairs and skill training."
     },
     "footer": {
-        "services": "Services",
-        "industry_educational": "Industry Collaboration - Educational Institutions",
-        "entrepreneurship_incubation": "Entrepreneurship Incubation",
-        "training_skill_development": "Training and Skills Development",
-        "technology_integration": "Technology Integration",
+        "description": "An ecosystem consists of academia, companies and government that helps to increase employment for fresh grads.",
+        "products": "Products",
         "partnership": "Partnership",
-        "school_university": "Schools & Universities",
+        "school_university": "Vocational Schools and Universities",
         "companies": "Companies",
         "registered_member": "Registered & Member of",
         "complete_solution": "A complete solution for student career guidance, job fairs, school career center systems & corporate CSR. Don't let students just graduate! Produce ready-to-work graduates with Career Support. Create the best career ecosystem with a modern and integrated school career center."
