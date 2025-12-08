@@ -45,11 +45,11 @@
 		<img src="@/assets/images/section3.png" alt="phone image" class="hidden md:block" style="height: 725px;">
 		<div class="text-[#171717] md:ml-15 flex flex-col items-start">
 			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center md:text-left">{{ $t('home.what_you_can_do') }}</p>
-			<p class="text-xl my-5 text-center md:text-left">{{ $t('home.create_profile_apply_jobs') }}</p>
+			<p class="md:text-xl my-5 text-center md:text-left">{{ $t('home.create_profile_apply_jobs') }}</p>
 
 			<div class="flex flex-col md:flex-row justify-center md:gap-x-5 gap-y-5 md:gap-y-0 mx-auto md:mx-0">
-				<a href="https://apps.apple.com/id/app/career-support-candidate/id1524249229" target="_blank" class="custom-button">{{ $t('home.download_for_ios') }}</a>
-				<a href="https://play.google.com/store/apps/details?id=com.frisidea.careersupport.candidate" target="_blank" class="custom-button">{{ $t('home.download_for_android') }}</a>
+				<a href="https://apps.apple.com/id/app/career-support-candidate/id1524249229" target="_blank" class="custom-button text-center">{{ $t('home.download_for_ios') }}</a>
+				<a href="https://play.google.com/store/apps/details?id=com.frisidea.careersupport.candidate" target="_blank" class="custom-button text-center">{{ $t('home.download_for_android') }}</a>
 			</div>
 
 			<div class="flex flex-col gap-y-6 mt-5">
@@ -78,13 +78,13 @@
 	</div>
 
 	<!-- Section 4 -->
-	<div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center" id="cs-schools">
-		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.career_support_app_for_schools') }}</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
+	<div class="w-full bg-[#EDF3F9] p-5 md:p-20 flex flex-col items-center" id="cs-schools">
+		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.career_support_app_for_schools') }}</p>
+		<p class="md:text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
-		<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-8">{{ $t('home.register_now') }}!</a>
+		<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-4 md:my-8">{{ $t('home.register_now') }}!</a>
 
-		<div class="flex gap-x-5 w-full">
+		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full">
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
 					class="bg-[#FAFAFA] border border-[#E3E3E3] w-10 h-10 rounded-full flex items-center justify-center mt-2 mb-5">
@@ -117,7 +117,7 @@
 				<p class="text-[#8A8A8A] mt-3">{{ $t('home.schools_can_build') }}</p>
 			</div>
 		</div>
-		<div class="flex gap-x-5 w-full my-5">
+		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full my-5">
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
 					class="bg-[#FAFAFA] border border-[#E3E3E3] w-10 h-10 rounded-full flex items-center justify-center mt-2 mb-5">
@@ -168,11 +168,11 @@
 	</div>
 
 	<!-- Section 5 -->
-	<div class="p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.confused_about_choosing_service') }}</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
+	<div class="p-5 md:p-20 flex flex-col items-center">
+		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.confused_about_choosing_service') }}</p>
+		<p class="md:text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
-		<div class="flex gap-x-5 w-full mt-5">
+		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full mt-5">
 			<div class="bg-white border border-[#E3E3E3] p-5 rounded-xl w-full flex flex-col items-center">
 				<div
 					class="bg-[#FAFAFA] border border-[#E3E3E3] w-10 h-10 rounded-full flex items-center justify-center mt-2 mb-5">
@@ -186,8 +186,8 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">{{ $t('home.join_the_school_portal') }}</p>
-				<p class="text-[#8A8A8A] my-3">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
+				<p class="text-xl font-semibold text-center">{{ $t('home.join_the_school_portal') }}</p>
+				<p class="text-[#8A8A8A] my-3 text-center">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
 
 				<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-4">{{ $t('home.register_now') }}</a>
 			</div>
@@ -203,8 +203,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">{{ $t('home.free_consultation') }}</p>
-				<p class="text-[#8A8A8A] my-3">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
+				<p class="text-xl font-semibold text-center">{{ $t('home.free_consultation') }}</p>
+				<p class="text-[#8A8A8A] my-3 text-center">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
 
 				<a href="http://wa.me/6281315938540" target="_blank" class="custom-button pill my-4">{{ $t('home.contact_us') }}</a>
 			</div>
@@ -212,47 +212,49 @@
 	</div>
 
 	<!-- Section 6 -->
-	<div class="p-20 flex items-center gap-x-10">
-		<div class="w-[50%]">
-			<p class="text-4xl leading-15 font-semibold">{{ $t('home.boost_your_skills') }}</p>
-			<p class="text-lg text-[#4B4B4B] my-5">{{ $t('home.skillhub_description') }}</p>
+	<div class="p-5 md:p-20 flex flex-col md:flex-row items-center gap-x-10">
+		<div class="md:w-[50%]">
+			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center md:text-left">{{ $t('home.boost_your_skills') }}</p>
+			<p class="text-lg text-[#4B4B4B] my-5 text-center md:text-left">{{ $t('home.skillhub_description') }}</p>
 
-			<a href="https://skillhub.id/" target="_blank" class="custom-button my-5">{{ $t('home.learn_more') }}</a>
+			<div class="flex justify-center md:justify-start my-5">
+				<a href="https://skillhub.id/" target="_blank" class="custom-button">{{ $t('home.learn_more') }}</a>
+			</div>
 
 			<div class="flex flex-col gap-y-6 mt-3">
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-6 h-3 md:w-3 md:h-3 bg-[#ED1966] mx-2" style=""></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.material_tailored') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-5 h-3 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.access_anytime') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-6 h-3 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.additional_skills') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-5.5 h-3 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.get_certificate') }}</span>
 				</div>
 				<div class="custom-list-tile">
-					<div class="rounded-full w-3 h-3 bg-[#ED1966] mx-2"></div>
+					<div class="rounded-full w-5.5 h-3 md:w-3 md:h-3 bg-[#ED1966] mx-2"></div>
 					<span class="text-[#171717] text-xl">{{ $t('home.skills_certificates_recorded') }}</span>
 				</div>
 			</div>
 		</div>
-		<div class="w-[50%]">
+		<div class="md:w-[50%] mt-10 md:mt-0">
 			<img src="@/assets/images/skillhub.png" alt="skillhub image" class="rounded-xl">
 		</div>
 	</div>
 
 	<!-- Section 7 -->
-	 <div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.connecting_students_with_world_of_work') }}</p>
-		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.career_support_actively_supports') }}</p>
+	 <div class="w-full bg-[#EDF3F9] p-5 md:p-20 flex flex-col items-center">
+		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.connecting_students_with_world_of_work') }}</p>
+		<p class="md:text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.career_support_actively_supports') }}</p>
 
-		<div class="flex items-center gap-x-5">
+		<div class="flex items-center gap-x-2 md:gap-x-5">
 			<button class="arrow-button" @click="previousSlide">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 					<rect width="24" height="24" fill="none" />
@@ -260,10 +262,26 @@
 				</svg>
 			</button>
 			<div class="flex items-center justify-center gap-x-5 mt-5">
-				<div class="custom-card h-[352px]" v-for="index in [0, 1, 2]" :key="currentSlide + index">
+				<!-- Mobile: show only 1 card -->
+				<div class="custom-card w-[250px] h-[265px] md:hidden" :key="currentSlide">
+					<img class="image-container" :src="section7CardsContent[currentSlide]?.img" :alt="section7CardsContent[currentSlide]?.title" />
+
+					<div class="flex items-center text-[#818C9F] my-2 md:my-5">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
+							<rect width="24" height="24" fill="none" />
+							<path fill="currentColor" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.194-.013h4.112c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87q.074.562.107 1.23a.75.75 0 0 1 .019.46c.027.801.027 1.712.027 2.743v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.031 0-1.942.027-2.744a.75.75 0 0 1 .02-.46q.032-.667.106-1.229c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75m-4.237 8c-.013.653-.013 1.396-.013 2.25v2c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008s1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-2c0-.854 0-1.597-.013-2.25zm18.405-1.5H2.832q.024-.284.058-.54c.135-1.005.389-1.585.812-2.008s1.003-.677 2.009-.812c1.028-.138 2.382-.14 4.289-.14h4c1.907 0 3.262.002 4.29.14c1.005.135 1.585.389 2.008.812s.677 1.003.812 2.009q.034.255.058.539" clip-rule="evenodd" />
+						</svg>
+						<span class="ml-2">January 2026</span>
+					</div>
+
+					<p class="font-medium text-[#08151E]">{{ section7CardsContent[currentSlide]?.title }}</p>
+				</div>
+
+				<!-- Desktop: show 3 cards -->
+				<div class="custom-card w-[350px] h-[352px] hidden md:block" v-for="index in [0, 1, 2]" :key="currentSlide + index">
 					<img class="image-container" :src="section7CardsContent[currentSlide + index]?.img" :alt="section7CardsContent[currentSlide + index]?.title" />
 
-					<div class="flex items-center text-[#818C9F] my-5">
+					<div class="flex items-center text-[#818C9F] my-2 md:my-5">
 						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24">
 							<rect width="24" height="24" fill="none" />
 							<path fill="currentColor" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.194-.013h4.112c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87q.074.562.107 1.23a.75.75 0 0 1 .019.46c.027.801.027 1.712.027 2.743v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.031 0-1.942.027-2.744a.75.75 0 0 1 .02-.46q.032-.667.106-1.229c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75m-4.237 8c-.013.653-.013 1.396-.013 2.25v2c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008s1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-2c0-.854 0-1.597-.013-2.25zm18.405-1.5H2.832q.024-.284.058-.54c.135-1.005.389-1.585.812-2.008s1.003-.677 2.009-.812c1.028-.138 2.382-.14 4.289-.14h4c1.907 0 3.262.002 4.29.14c1.005.135 1.585.389 2.008.812s.677 1.003.812 2.009q.034.255.058.539" clip-rule="evenodd" />
@@ -284,11 +302,11 @@
 	</div>
 
 	<!-- Section 8 -->
-	 <div class="w-full bg-[#195699] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-white">{{ $t('home.career_success_stories') }}</p>
-		<p class="text-lg text-[#4B4B4B] my-5 text-white text-center">{{ $t('home.see_how_career_support_helps') }}</p>
+	 <div class="w-full bg-[#195699] p-5 md:p-20 flex flex-col items-center">
+		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-white text-center">{{ $t('home.career_success_stories') }}</p>
+		<p class="md:text-lg text-[#4B4B4B] my-5 text-white text-center">{{ $t('home.see_how_career_support_helps') }}</p>
 
-		<div class="flex items-center gap-x-5 mb-5">
+		<div class="flex items-center gap-x-3 md:gap-x-5 md:mb-5">
 			<button class="button-category" :class="{ active: activeCategory === 'problem' }" @click="setCategory('problem')">
 				{{ $t('home.problem') }}
 			</button>
@@ -300,20 +318,20 @@
 			</button>
 		</div>
 
-		<div class="flex items-center gap-x-5 mt-5">
+		<div class="flex items-center gap-x-3 md:gap-x-5 mt-5">
 			<button class="arrow-button" @click="previousSection8Slide">
 				<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
 					<rect width="24" height="24" fill="none" />
 					<path fill="currentColor" fill-rule="evenodd" d="M15.488 4.43a.75.75 0 0 1 .081 1.058L9.988 12l5.581 6.512a.75.75 0 1 1-1.138.976l-6-7a.75.75 0 0 1 0-.976l6-7a.75.75 0 0 1 1.057-.081" clip-rule="evenodd" />
 				</svg>
 			</button>
-			<div class="bg-white flex align-start p-7 rounded-xl w-full gap-x-7 h-[308px]">
+			<div class="bg-white flex flex-col md:flex-row align-start p-3 md:p-7 rounded-xl w-full gap-x-7 h-[500px] md:h-[308px]">
 				<img :src="currentSection8Content?.img" alt="" class="w-[200px]">
 
 				<div class="overflow-y-scroll">
-					<p class="text-3xl font-medium text-[#08151E] mb-5">{{ currentSection8Content?.title }}</p>
+					<p class="text-3xl font-medium text-[#08151E] mb-3 md:mb-5">{{ currentSection8Content?.title }}</p>
 					<p class="text-2xl text-[#4682C4] uppercase">{{ activeCategoryLabel }}</p>
-					<p class="text-[#504C4C] mt-5">{{ $t(currentSection8Content.description) }}</p>
+					<p class="text-[#504C4C] mt-3 md:mt-5">{{ $t(currentSection8Content.description) }}</p>
 				</div>
 			</div>
 			<button class="arrow-button" @click="nextSection8Slide">
@@ -326,30 +344,30 @@
 	</div>
 
 	<!-- Section 9 -->
-	<div class="p-20">
+	<div class="p-5 md:p-20">
 		<div class="pb-5">
-			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.institutional_partners') }}</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.institutions_collaborated') }}</p>
+			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.institutional_partners') }}</p>
+			<p class="md:text-lg text-[#4B4B4B] my-3 md:my-5 text-center">{{ $t('home.institutions_collaborated') }}</p>
 
-			<div class="flex items-center justify-evenly">
+			<div class="flex items-center flex-wrap justify-evenly">
 				<img v-for="n in Array.from({ length: 8 }, (v, i) => i + 1)" :key="n"
 					:src="getImage('institutional_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
 			</div>
 		</div>
 		<div class="py-5">
-			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.school_partners') }}</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.schools_collaborated') }}</p>
+			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.school_partners') }}</p>
+			<p class="md:text-lg text-[#4B4B4B] my-3 md:my-5 text-center">{{ $t('home.schools_collaborated') }}</p>
 
-			<div class="flex items-center justify-evenly">
+			<div class="flex items-center flex-wrap justify-evenly">
 				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n"
 					:src="getImage('school_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
 			</div>
 		</div>
 		<div>
-			<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.company_partners') }}</p>
-			<p class="text-lg text-[#4B4B4B] my-5 text-center">{{ $t('home.companies_collaborated') }}</p>
+			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.company_partners') }}</p>
+			<p class="md:text-lg text-[#4B4B4B] my-3 md:my-5 text-center">{{ $t('home.companies_collaborated') }}</p>
 
-			<div class="flex items-center justify-evenly">
+			<div class="flex items-center flex-wrap justify-evenly">
 				<img v-for="n in Array.from({ length: 7 }, (v, i) => i + 1)" :key="n"
 					:src="getImage('company_partner', n)" :alt="`partner_img_${n}`" class="w-[150px] h-[150px]">
 			</div>
@@ -357,12 +375,12 @@
 	</div>
 
 	<!-- Section 10 -->
-	<div class="w-full bg-[#195699] p-20 flex flex-col items-center">
-		<p class="text-4xl leading-15 font-semibold text-white">{{ $t('home.dont_miss_upcoming_events') }}!</p>
-		<p class="text-lg text-[#4B4B4B] my-5 text-white text-center">{{ $t('home.career_support_regularly_organizes') }}</p>
+	<div class="w-full bg-[#195699] p-5 md:p-20 flex flex-col items-center">
+		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-white text-center">{{ $t('home.dont_miss_upcoming_events') }}!</p>
+		<p class="md:text-lg text-[#4B4B4B] my-3 md:my-5 text-white text-center">{{ $t('home.career_support_regularly_organizes') }}</p>
 
-		<div class="flex items-center justify-center gap-x-5 mt-5">
-			<div class="custom-card h-[452px]">
+		<div class="flex flex-col md:flex-row items-center justify-center gap-y-3 md:gap-y-0 md:gap-x-5 mt-5">
+			<div class="custom-card w-[350px] md:h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Job Fair 2026</p>
@@ -385,7 +403,7 @@
 					<span>Sold Out</span>
 				</button>
 			</div>
-			<div class="custom-card h-[452px]">
+			<div class="custom-card w-[350px] md:h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Webinar CV Klinik untuk Mahasiswa</p>
@@ -408,7 +426,7 @@
 					<span>Join</span>
 				</button>
 			</div>
-			<div class="custom-card h-[452px]">
+			<div class="custom-card w-[350px] md:h-[452px]">
 				<div class="image-container bg-[#D9D9D9]"></div>
 
 				<p class="text-xl mt-5 mb-3">Webinar 01: Tips interview agar dilirik HR</p>
@@ -572,7 +590,6 @@ const section8CardsContent = reactive({
 }
 
 .custom-card {
-	width: 350px;
 	background-color: white;
 	padding: 1rem;
 	border-radius: 1.25rem;
@@ -583,6 +600,12 @@ const section8CardsContent = reactive({
 	height: 200px;
 	border-radius: 1rem;
 	object-fit: cover;
+}
+
+@media screen and (max-width: 768px) {
+	.custom-card .image-container {
+		height: 150px;
+	}
 }
 
 .custom-card .button {
@@ -634,6 +657,13 @@ const section8CardsContent = reactive({
 	padding: 1rem 2rem;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+}
+
+@media screen and (max-width: 768px) {
+	.button-category {
+		padding: 0.5rem 1rem;
+		font-size: 0.875rem;
+	}	
 }
 
 .button-category:hover {
