@@ -8,8 +8,8 @@
 		<p class="text-[#818C9F]">{{ $t('home.career_support_app_description') }}</p>
 
 		<div class="flex flex-col md:flex-row justify-center gap-y-5 md:gap-y-0 gap-x-5 mt-10">
-			<button type="button" class="custom-button">Career Support App</button>
-			<button type="button" class="custom-button">School Portal</button>
+			<button type="button" class="custom-button" @click="scrollToSection('cs-app')">Career Support App</button>
+			<button type="button" class="custom-button" @click="scrollToSection('cs-schools')">School Portal</button>
 		</div>
 
 		<img src="@/assets/images/rafiki.png" alt="Career Support App" class="mx-auto mt-5">
@@ -41,15 +41,15 @@
 	</div>
 
 	<!-- Section 3 -->
-	<div class="m-5 md:m-20 flex items-start">
+	<div class="m-5 md:m-20 flex items-start" id="cs-app">
 		<img src="@/assets/images/section3.png" alt="phone image" class="hidden md:block" style="height: 725px;">
 		<div class="text-[#171717] md:ml-15 flex flex-col items-start">
 			<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center md:text-left">{{ $t('home.what_you_can_do') }}</p>
 			<p class="text-xl my-5 text-center md:text-left">{{ $t('home.create_profile_apply_jobs') }}</p>
 
 			<div class="flex flex-col md:flex-row justify-center md:gap-x-5 gap-y-5 md:gap-y-0 mx-auto md:mx-0">
-				<button type="button" class="custom-button">{{ $t('home.download_for_ios') }}</button>
-				<button type="button" class="custom-button">{{ $t('home.download_for_android') }}</button>
+				<a href="https://apps.apple.com/id/app/career-support-candidate/id1524249229" target="_blank" class="custom-button">{{ $t('home.download_for_ios') }}</a>
+				<a href="https://play.google.com/store/apps/details?id=com.frisidea.careersupport.candidate" target="_blank" class="custom-button">{{ $t('home.download_for_android') }}</a>
 			</div>
 
 			<div class="flex flex-col gap-y-6 mt-5">
@@ -78,11 +78,11 @@
 	</div>
 
 	<!-- Section 4 -->
-	<div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center">
+	<div class="w-full bg-[#EDF3F9] p-20 flex flex-col items-center" id="cs-schools">
 		<p class="text-4xl leading-15 font-semibold text-center">{{ $t('home.career_support_app_for_schools') }}</p>
 		<p class="text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
-		<button type="button" class="custom-button pill my-8">{{ $t('home.register_now') }}!</button>
+		<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-8">{{ $t('home.register_now') }}!</a>
 
 		<div class="flex gap-x-5 w-full">
 			<div class="bg-white p-5 rounded-xl w-full">
@@ -189,7 +189,7 @@
 				<p class="text-xl font-semibold">{{ $t('home.join_the_school_portal') }}</p>
 				<p class="text-[#8A8A8A] my-3">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
 
-				<button type="button" class="custom-button pill my-4">{{ $t('home.register_now') }}</button>
+				<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-4">{{ $t('home.register_now') }}</a>
 			</div>
 			<div class="bg-white border border-[#E3E3E3] p-5 rounded-xl w-full flex flex-col items-center">
 				<div
@@ -206,7 +206,7 @@
 				<p class="text-xl font-semibold">{{ $t('home.free_consultation') }}</p>
 				<p class="text-[#8A8A8A] my-3">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
 
-				<button type="button" class="custom-button pill my-4">{{ $t('home.contact_us') }}</button>
+				<a href="http://wa.me/6281315938540" target="_blank" class="custom-button pill my-4">{{ $t('home.contact_us') }}</a>
 			</div>
 		</div>
 	</div>
@@ -217,7 +217,7 @@
 			<p class="text-4xl leading-15 font-semibold">{{ $t('home.boost_your_skills') }}</p>
 			<p class="text-lg text-[#4B4B4B] my-5">{{ $t('home.skillhub_description') }}</p>
 
-			<button type="button" class="custom-button my-5">{{ $t('home.learn_more') }}</button>
+			<a href="https://skillhub.id/" target="_blank" class="custom-button my-5">{{ $t('home.learn_more') }}</a>
 
 			<div class="flex flex-col gap-y-6 mt-3">
 				<div class="custom-list-tile">
@@ -460,6 +460,13 @@ const previousSlide = () => {
 		currentSlide.value = section7CardsContent.length - 3
 	} else {
 		currentSlide.value--
+	}
+}
+
+const scrollToSection = (sectionId: string) => {
+	const section = document.getElementById(sectionId)
+	if (section) {
+		section.scrollIntoView({ behavior: 'smooth', block: 'start' })
 	}
 }
 
