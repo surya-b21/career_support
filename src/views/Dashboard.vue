@@ -1,15 +1,15 @@
 <template>
 	<!-- Section 1 -->
 	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl">
-		<span class="text-[#155DFC]">{{ $t('home.first_career_center') }}</span>
+		<span class="text-[#155DFC] md:text-2xl">{{ $t('home.first_career_center') }}</span>
 
 		<p class="text-[#08151E] font-semibold text-2xl md:text-6xl my-5" v-html="$t('home.ready_to_develop')"></p>
 
-		<p class="text-[#818C9F]">{{ $t('home.career_support_app_description') }}</p>
+		<p class="text-[#818C9F] md:text-2xl">{{ $t('home.career_support_app_description') }}</p>
 
 		<div class="flex flex-col md:flex-row justify-center gap-y-5 md:gap-y-0 gap-x-5 mt-10">
-			<button type="button" class="custom-button" @click="scrollToSection('cs-app')">Career Support App</button>
-			<button type="button" class="custom-button" @click="scrollToSection('cs-schools')">School Portal</button>
+			<button type="button" class="custom-button" @click="scrollToSection('cs-app')">{{ $t('home.career_support_app') }}</button>
+			<button type="button" class="custom-button" @click="scrollToSection('cs-schools')">{{ $t('home.career_center_portal') }}</button>
 		</div>
 
 		<img src="@/assets/images/rafiki.png" alt="Career Support App" class="mx-auto mt-5">
@@ -18,25 +18,25 @@
 	<!-- Section 2 -->
 	<div class="flex flex-col">
 		<p class="text-xl md:text-4xl md:leading-15 font-semibold text-center mt-5 md:mt-20 mb-5 text-[#12141D]" v-html="$t('home.why_aio_career')"></p>
-		<p class="text-center text-[#4B4B4B] mb-5 md:mb-15 mx-0 md:mx-85">{{ $t('home.various_needs') }}</p>
+		<p class="text-center text-[#4B4B4B] mb-5 md:mb-15 mx-0 md:mx-85 md:text-xl">{{ $t('home.various_needs') }}</p>
 	</div>
 
 	<div class="bg-[#EDF3F9] text-center my-5 mx-10 p-10 rounded-xl grid grid-cols-1 md:grid-cols-4 gap-x-0 md:gap-x-15 gap-y-10 md:gap-y-0">
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">92%</p>
-			<p class="text-sm text-[#1D3752]">{{ $t('home.number_of_relevant_jobs') }}</p>
+			<p class="text-sm text-[#1D3752] md:text-xl">{{ $t('home.number_of_relevant_jobs') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">83%</p>
-			<p class="text-sm text-[#1D3752]">{{ $t('home.corporate_partnership') }}</p>
+			<p class="text-sm text-[#1D3752] md:text-xl">{{ $t('home.corporate_partnership') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">80%</p>
-			<p class="text-sm text-[#1D3752]">{{ $t('home.stundent_n_alumni_database') }}</p>
+			<p class="text-sm text-[#1D3752] md:text-xl">{{ $t('home.stundent_n_alumni_database') }}</p>
 		</div>
 		<div>
 			<p class="text-4xl text-[#4682C4] mb-5 font-semibold">76%</p>
-			<p class="text-sm text-[#1D3752]">{{ $t('home.skill_training_for_student') }}</p>
+			<p class="text-sm text-[#1D3752] md:text-xl">{{ $t('home.skill_training_for_student') }}</p>
 		</div>
 	</div>
 
@@ -80,11 +80,11 @@
 	<!-- Section 4 -->
 	<div class="w-full bg-[#EDF3F9] p-5 md:p-20 flex flex-col items-center" id="cs-schools">
 		<p class="text-2xl md:text-4xl md:leading-15 font-semibold text-center">{{ $t('home.career_support_app_for_schools') }}</p>
-		<p class="md:text-lg text-center text-[#4B4B4B] my-5">{{ $t('home.in_addition_to_supporting') }}</p>
+		<p class="md:text-lg text-center text-[#4B4B4B] mt-5">{{ $t('home.in_addition_to_supporting') }}</p>
 
 		<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-4 md:my-8">{{ $t('home.register_now') }}!</a>
 
-		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full">
+		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full mt-5">
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
 					class="bg-[#FAFAFA] border border-[#E3E3E3] w-10 h-10 rounded-full flex items-center justify-center mt-2 mb-5">
@@ -98,8 +98,8 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">{{ $t('home.monitor_student_development') }}</p>
-				<p class="text-[#8A8A8A] mt-3">{{ $t('home.with_the_career_support_dashboard') }}</p>
+				<p class="md:text-2xl font-semibold">{{ $t('home.monitor_student_development') }}</p>
+				<p class="text-[#8A8A8A] mt-3 md:text-lg">{{ $t('home.with_the_career_support_dashboard') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -113,8 +113,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">{{ $t('home.complete_professional_career_portal') }}</p>
-				<p class="text-[#8A8A8A] mt-3">{{ $t('home.schools_can_build') }}</p>
+				<p class="md:text-2xl font-semibold">{{ $t('home.complete_professional_career_portal') }}</p>
+				<p class="text-[#8A8A8A] mt-3 md:text-lg">{{ $t('home.schools_can_build') }}</p>
 			</div>
 		</div>
 		<div class="flex flex-col md:flex-row gap-y-5 md:gap-x-5 w-full my-5">
@@ -131,8 +131,8 @@
 					</svg>
 				</div>
 
-				<p class="text-xl font-semibold">{{ $t('home.connect_students_to_industry') }}</p>
-				<p class="text-[#8A8A8A] mt-3">{{ $t('home.schools_can_directly_connect') }}</p>
+				<p class="md:text-2xl font-semibold">{{ $t('home.connect_students_to_industry') }}</p>
+				<p class="text-[#8A8A8A] mt-3 md:text-lg">{{ $t('home.schools_can_directly_connect') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -146,8 +146,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">{{ $t('home.integrated_alumni_data') }}</p>
-				<p class="text-[#8A8A8A] mt-3">{{ $t('home.track_alumni_and_their_career_development') }}</p>
+				<p class="md:text-2xl font-semibold">{{ $t('home.integrated_alumni_data') }}</p>
+				<p class="text-[#8A8A8A] mt-3 md:text-lg">{{ $t('home.track_alumni_and_their_career_development') }}</p>
 			</div>
 			<div class="bg-white p-5 rounded-xl w-full">
 				<div
@@ -161,8 +161,8 @@
 						</g>
 					</svg>
 				</div>
-				<p class="text-xl font-semibold">{{ $t('home.full_support_and_guidance') }}</p>
-				<p class="text-[#8A8A8A] mt-3">{{ $t('home.career_support_provides_comprehensive') }}</p>
+				<p class="md:text-2xl font-semibold">{{ $t('home.full_support_and_guidance') }}</p>
+				<p class="text-[#8A8A8A] mt-3 md:text-lg">{{ $t('home.career_support_provides_comprehensive') }}</p>
 			</div>
 		</div>
 	</div>
@@ -187,7 +187,7 @@
 				</div>
 
 				<p class="text-xl font-semibold text-center">{{ $t('home.join_the_school_portal') }}</p>
-				<p class="text-[#8A8A8A] my-3 text-center">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
+				<p class="text-[#8A8A8A] my-3 text-center" style="font-size: 18px;">{{ $t('home.find_a_service_that_suits_your_needs') }}</p>
 
 				<a href="https://cdc.career.support/join" target="_blank" class="custom-button pill my-4">{{ $t('home.register_now') }}</a>
 			</div>
@@ -204,7 +204,7 @@
 					</svg>
 				</div>
 				<p class="text-xl font-semibold text-center">{{ $t('home.free_consultation') }}</p>
-				<p class="text-[#8A8A8A] my-3 text-center">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
+				<p class="text-[#8A8A8A] my-3 text-center" style="font-size: 18px;">{{ $t('home.our_school_consultant_is_ready_to_help_you') }}</p>
 
 				<a href="http://wa.me/6281315938540" target="_blank" class="custom-button pill my-4">{{ $t('home.contact_us') }}</a>
 			</div>
@@ -271,7 +271,7 @@
 							<rect width="24" height="24" fill="none" />
 							<path fill="currentColor" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.194-.013h4.112c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87q.074.562.107 1.23a.75.75 0 0 1 .019.46c.027.801.027 1.712.027 2.743v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.031 0-1.942.027-2.744a.75.75 0 0 1 .02-.46q.032-.667.106-1.229c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75m-4.237 8c-.013.653-.013 1.396-.013 2.25v2c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008s1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-2c0-.854 0-1.597-.013-2.25zm18.405-1.5H2.832q.024-.284.058-.54c.135-1.005.389-1.585.812-2.008s1.003-.677 2.009-.812c1.028-.138 2.382-.14 4.289-.14h4c1.907 0 3.262.002 4.29.14c1.005.135 1.585.389 2.008.812s.677 1.003.812 2.009q.034.255.058.539" clip-rule="evenodd" />
 						</svg>
-						<span class="ml-2">January 2026</span>
+						<span class="ml-2">2026</span>
 					</div>
 
 					<p class="font-medium text-[#08151E]">{{ section7CardsContent[currentSlide]?.title }}</p>
@@ -286,7 +286,7 @@
 							<rect width="24" height="24" fill="none" />
 							<path fill="currentColor" fill-rule="evenodd" d="M7 1.75a.75.75 0 0 1 .75.75v.763c.662-.013 1.391-.013 2.194-.013h4.112c.803 0 1.532 0 2.194.013V2.5a.75.75 0 0 1 1.5 0v.827q.39.03.739.076c1.172.158 2.121.49 2.87 1.238c.748.749 1.08 1.698 1.238 2.87q.074.562.107 1.23a.75.75 0 0 1 .019.46c.027.801.027 1.712.027 2.743v2.112c0 1.838 0 3.294-.153 4.433c-.158 1.172-.49 2.121-1.238 2.87c-.749.748-1.698 1.08-2.87 1.238c-1.14.153-2.595.153-4.433.153H9.944c-1.838 0-3.294 0-4.433-.153c-1.172-.158-2.121-.49-2.87-1.238c-.748-.749-1.08-1.698-1.238-2.87c-.153-1.14-.153-2.595-.153-4.433v-2.112c0-1.031 0-1.942.027-2.744a.75.75 0 0 1 .02-.46q.032-.667.106-1.229c.158-1.172.49-2.121 1.238-2.87c.749-.748 1.698-1.08 2.87-1.238q.35-.046.739-.076V2.5A.75.75 0 0 1 7 1.75m-4.237 8c-.013.653-.013 1.396-.013 2.25v2c0 1.907.002 3.262.14 4.29c.135 1.005.389 1.585.812 2.008s1.003.677 2.009.812c1.028.138 2.382.14 4.289.14h4c1.907 0 3.262-.002 4.29-.14c1.005-.135 1.585-.389 2.008-.812s.677-1.003.812-2.009c.138-1.027.14-2.382.14-4.289v-2c0-.854 0-1.597-.013-2.25zm18.405-1.5H2.832q.024-.284.058-.54c.135-1.005.389-1.585.812-2.008s1.003-.677 2.009-.812c1.028-.138 2.382-.14 4.289-.14h4c1.907 0 3.262.002 4.29.14c1.005.135 1.585.389 2.008.812s.677 1.003.812 2.009q.034.255.058.539" clip-rule="evenodd" />
 						</svg>
-						<span class="ml-2">January 2026</span>
+						<span class="ml-2">2026</span>
 					</div>
 
 					<p class="text-lg font-medium text-[#08151E]">{{ section7CardsContent[currentSlide + index]?.title }}</p>
@@ -328,7 +328,7 @@
 			<div class="bg-white flex flex-col md:flex-row align-start p-3 md:p-7 rounded-xl w-full gap-x-7 h-[500px] md:h-[308px]">
 				<img :src="currentSection8Content?.img" alt="" class="w-[200px]">
 
-				<div class="overflow-y-scroll">
+				<div class="overflow-y-auto scrollbar-hide">
 					<p class="text-3xl font-medium text-[#08151E] mb-3 md:mb-5">{{ currentSection8Content?.title }}</p>
 					<p class="text-2xl text-[#4682C4] uppercase">{{ activeCategoryLabel }}</p>
 					<p class="text-[#504C4C] mt-3 md:mt-5">{{ $t(currentSection8Content.description) }}</p>
@@ -534,7 +534,7 @@ const section7CardsContent = reactive([
 	{"title": "SMKN 33 Jakarta - Exploring Tourism Careers", "img": new URL(`../assets/images/section7/3.png`, import.meta.url).href},
 	{"title": "SMKN 69 Jakarta - Job Fair Membara 2024", "img": new URL(`../assets/images/section7/4.png`, import.meta.url).href},
 	{"title": "SMKS Assalam Depok - Bursa Kerja 2024", "img": new URL(`../assets/images/section7/5.png`, import.meta.url).href},
-	{"title": "universitas Majalengka - UNMA Career Expo 2024", "img": new URL(`../assets/images/section7/6.png`, import.meta.url).href},
+	{"title": "Universitas Majalengka - UNMA Career Expo 2024", "img": new URL(`../assets/images/section7/6.png`, import.meta.url).href},
 	{"title": "SMK Islam PB Soedirman 2 - Career Day 2024", "img": new URL(`../assets/images/section7/7.png`, import.meta.url).href},
 	{"title": "SMK Telkom Bandung - Job Fair 2024", "img": new URL(`../assets/images/section7/8.png`, import.meta.url).href},
 ])
@@ -569,6 +569,7 @@ const section8CardsContent = reactive({
 	border-radius: 0.5rem;
 	cursor: pointer;
 	transition: background-color 0.3s ease;
+	font-size: 20px;
 }
 
 .custom-button:hover {
@@ -672,5 +673,14 @@ const section8CardsContent = reactive({
 
 .button-category.active {
 	color: #ED1966;
+}
+
+.scrollbar-hide {
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+	display: none;
 }
 </style>
