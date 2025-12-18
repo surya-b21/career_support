@@ -70,6 +70,8 @@
 						<p class="font-medium">{{ $t('footer.products') }}</p>
 						<a href="https://jobfair.career.support/" target="_blank"><p class="mt-3 text-sm cursor-pointer">Job Fairs</p></a>
 						<a href="https://skillhub.id/" target="_blank"><p class="mt-3 text-sm cursor-pointer">Skill</p></a>
+						<a href="https://www.career.support/corporate-training-programs-company-branding-services/" target="_blank"><p class="mt-3 text-sm cursor-pointer">Corporate Training</p></a>
+						<a href="https://csr.career.support/" target="_blank"><p class="mt-3 text-sm cursor-pointer">CSR Programs</p></a>
 					</div>
 
 					<div class="text-[#818C9F]">
